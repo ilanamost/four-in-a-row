@@ -1,0 +1,45 @@
+@import '../../../styles/shared';
+
+.modal-container {
+  position: fixed;
+  z-index: 10;
+  top: 35%;
+  left: 40%;
+
+  @media (max-width: 790px) {
+    left: 35%;
+  }
+  
+  @media (max-width: 680px) {
+    left: 30%;
+  }
+
+  @media (max-width: 500px) {
+    left: 20%;
+    top: 30%;
+  }
+
+  @media (max-width: 320px) {
+    left: 15%;
+  }
+
+  .modal-content {
+    background-color: $modalBackgroundColor;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid $modalBorderColor;
+    font-size: calc(16px + 1vw);
+
+    .content-container {
+      .title {
+        font-family: RobotoMedium;
+      }
+    }
+
+    .buttons-container {
+      .btn-success {
+        margin-right: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<section class="game-container flex space-between flex-column">
+  <h1 class="title"> {{ title }} </h1>
+
+  <div class="container flex justify-end align-center flex-column-reverse">
+    <app-modal [winner]="winner" 
+    (modalAction)="onModalAction($event)" 
+    *ngIf="isModalOpen">
+    </app-modal>
+
+    <app-table [cells]="cells" 
+    [isGameOver]="isGameOver"
+    (tableAction)="onTableAction($event)">
+    </app-table>
+
+    <app-score-table 
+    [playerOneScore]="playerOneScore" 
+    [playerTwoScore]="playerTwoScore"> 
+   </app-score-table> 
+  </div>
+
+  <router-outlet></router-outlet>
+</section>

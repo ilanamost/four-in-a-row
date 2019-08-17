@@ -1,0 +1,123 @@
+@import '../../../styles/shared';
+
+.row {
+  margin: unset !important;
+  &.table-row {
+    align-self: center;
+  }
+
+  .table {
+    margin: unset;
+    table-layout: fixed;
+    width: unset;
+    border-top: 4px solid $borderColor;
+    border-bottom: 4px solid $borderColor;
+    box-shadow: 2px -1px 35px 0px $tableBoxShadowColor;
+    margin-top: 3vh;
+
+    td {
+      border-right: 4px solid $borderColor;
+      border-left: 4px solid $borderColor;
+      border-top: unset;
+    }
+
+    .table-square {
+      text-align: center;
+      padding: 45px;
+      background-color: $tableSquareColor;
+      position: relative;
+      cursor: default;
+
+      @media (max-width: 790px) {
+        padding: 40px;
+      }
+
+      @media (max-width: 680px) {
+        padding: 30px;
+        background-color: $tableSquareSmallColor;
+      }
+
+      @media (max-width: 500px) {
+        padding: 20px;
+      }
+
+      &.highlight {
+        background-color: #3a7e3d8c;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #82b449;
+        }
+      }
+
+      .empty-circle {
+        position: absolute;
+        top: 7px;
+        left: 7.5px;
+        border-radius: 50%;
+        background-color: #9e9e9e;
+        box-shadow: inset 2px -1px 41px 0px $tableBoxShadowColor;
+        width: 85%;
+        height: 80%;
+        z-index: 1;
+
+        @media (max-width: 680px) {
+          left: 5px;
+          background-color: $borderColor;
+        }
+
+        @media (max-width: 500px) {
+          top: 5px;
+          left: 3.5px;
+        }
+      }
+
+      .checker {
+        position: absolute;
+        top: 7px;
+        left: 7.5px;
+        border-radius: 50%;
+        background-color: transparent;
+        width: 85%;
+        height: 80%;
+        z-index: 2;
+        
+        @media (max-width: 680px) {
+          left: 4.5px;
+          box-shadow: unset;
+        }
+
+        @media (max-width: 500px) {
+          top: 5px;
+          left: 3.5px;
+        }
+
+        &.red {
+          background-color: $redCheckerColor;
+        }
+
+        &.blue {
+          background-color: $blueCheckerColor;
+        }
+
+        &.fall {
+          animation-name: fall-animation;
+          animation-duration: 500ms;
+        }
+
+        @keyframes fall-animation {
+          from {
+            transform: translateY(var(--t));
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

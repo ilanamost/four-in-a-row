@@ -1,0 +1,21 @@
+@import '../../../styles/shared';
+
+.row {
+  &.score-row {
+    .score {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 3vw;
+      padding: 15px;
+      font-family: RobotoRegular;
+      color: $scoreColor;
+
+      .title {
+        font-family: RobotoMedium;
+        text-align: center;
+        font-size: 22px;
+      }
+    }
+  }
+}

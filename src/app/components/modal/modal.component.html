@@ -1,0 +1,18 @@
+<div class="modal-container">
+  <div class="modal-content">
+    <div class="content-container">
+      <p class="title flex-justify-center" *ngIf="winner;else tie">{{ winner.color }} won! Play again?</p>
+
+      <ng-template #tie>
+            <p class="title" > It's a tie! </p>
+      </ng-template>
+
+      <div class="buttons-container flex space-between">
+        <button (click)="resetGame()" class="btn btn-success">O.k</button>
+        <button (click)="closeModal()" class="btn btn-danger">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

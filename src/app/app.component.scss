@@ -1,0 +1,21 @@
+@import '../styles/shared';
+
+.game-container {
+  height: 100%;
+  width: 100%;
+
+  .title {
+    text-align: center;
+    padding: 20px;
+    text-transform: capitalize;
+    background-color: $titleBgColor;
+    color: $titleColor;
+    text-shadow: -6px -1px 8px $titleTextShadowColor;
+  }
+
+  .container {
+    height: 100%;
+    position: relative;
+  }
+}
+

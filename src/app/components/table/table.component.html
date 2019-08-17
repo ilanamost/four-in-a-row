@@ -1,0 +1,17 @@
+<div class="row table-row">
+  <table class="table">
+    <tbody>
+      <tr *ngFor="let row of cells; let i = index">
+        <td
+          class="table-square"
+          *ngFor="let cell of row; let j = index"
+          [class.highlight]="getHighlight(i, j) && !isGameOver"
+          (click)="makeMove(i, j)"
+        >
+          <div class="empty-circle"></div>
+          <div class="checker" [ngClass]="[cell.color]" id="{{i}},{{j}}" #checker></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
