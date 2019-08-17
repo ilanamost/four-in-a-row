@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "x-mix-drix": {
+    "four-in-a-row": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/x-mix-drix",
+            "outputPath": "dist/four-in-a-row",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "x-mix-drix:build"
+            "browserTarget": "four-in-a-row:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "x-mix-drix:build:production"
+              "browserTarget": "four-in-a-row:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "x-mix-drix:build"
+            "browserTarget": "four-in-a-row:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "x-mix-drix:serve"
+            "devServerTarget": "four-in-a-row:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "x-mix-drix:serve:production"
+              "devServerTarget": "four-in-a-row:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "x-mix-drix"
+  "defaultProject": "four-in-a-row"
 }
